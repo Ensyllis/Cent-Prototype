@@ -1,7 +1,6 @@
 import 'maps.dart';
 import 'favorites.dart';
 import 'accounts.dart';
-import 'picture.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 
@@ -13,9 +12,7 @@ void main() {
 }
 
 class MainPage extends StatefulWidget {
-  final CameraDescription camera;
-
-  const MainPage({Key? key, required this.camera}) : super(key: key);
+  const MainPage({super.key});
 
   @override
   _MainPageState createState() => _MainPageState();
@@ -29,7 +26,6 @@ class _MainPageState extends State<MainPage> {
     AccountsPage(), // Replace with your actual Account Page widget
     MapsPage(), // Replace with your actual Maps Page widget
     const Favorites(),
-    TakePictureScreen(camera: widget.camera), // Replace with your actual Favorites Page widget
     // Replace with your actual Favorites Page widget
   ];
 
@@ -70,16 +66,6 @@ class _MainPageState extends State<MainPage> {
           BottomNavigationBarItem(
             icon: Icon(
               _selectedIndex == 2
-                  ? CupertinoIcons.camera_fill
-                  : CupertinoIcons.camera,
-              size: 30,
-              color: Colors.black,
-            ),
-            )
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(
-              _selectedIndex == 3
                   ? CupertinoIcons.heart_fill
                   : CupertinoIcons.heart,
               size: 30,
