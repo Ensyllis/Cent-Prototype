@@ -6,7 +6,7 @@ import 'package:flutter/cupertino.dart';
 
 void main() {
   runApp(const MaterialApp(
-    title: 'Navigation Basics',
+    title: 'CENT',
     home: MainPage(),
   ));
 }
