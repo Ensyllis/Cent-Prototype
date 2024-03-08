@@ -1,5 +1,5 @@
-name: anchor_prototype
-description: A new Flutter project.
+name: Cent_Prototype
+description: Discount Project.
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
@@ -31,13 +31,17 @@ dependencies:
   flutter:
     sdk: flutter
 
-
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
+  page_transition: ^2.1.0
   cupertino_icons: ^1.0.2
-
-  flutter_slidable: ^3.0.1
   google_maps_flutter: ^2.5.3
+  flutter_slidable: ^3.0.1
+
+  camera: ^0.10.5+5
+  path_provider: ^2.1.1
+  path: ^1.8.3
+
 
 dev_dependencies:
   flutter_test:
@@ -48,7 +52,7 @@ dev_dependencies:
   # activated in the `analysis_options.yaml` file located at the root of your
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
-  flutter_lints: ^2.0.0
+  flutter_lints: ^3.0.1
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -60,6 +64,7 @@ flutter:
   # included with your application, so that you can use the icons in
   # the material Icons class.
   uses-material-design: true
+
 
   fonts:
     - family: Helvetica
@@ -76,15 +81,15 @@ flutter:
           style: italic
           weight: 700
 
-  # To add assets to your application, add an assets section, like this:
-  # assets:
-  #   - images/a_dot_burr.jpeg
-  #   - images/a_dot_ham.jpeg
-
   assets:
     - photos/IMG_6663copy.jpeg
     - photos/thai-noodles-5-22-10-3247233573.jpg
 
+
+  # To add assets to your application, add an assets section, like this:
+  # assets:
+  #   - images/a_dot_burr.jpeg
+  #   - images/a_dot_ham.jpeg
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
 
