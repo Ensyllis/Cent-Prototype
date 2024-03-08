@@ -37,9 +37,11 @@ dependencies:
   cupertino_icons: ^1.0.2
   google_maps_flutter: ^2.5.3
   flutter_slidable: ^3.0.1
+
   camera: ^0.10.5+5
   path_provider: ^2.1.1
   path: ^1.8.3
+
 
 dev_dependencies:
   flutter_test:
@@ -63,15 +65,31 @@ flutter:
   # the material Icons class.
   uses-material-design: true
 
+
+  fonts:
+    - family: Helvetica
+      fonts:
+        - asset: fonts/HelveticaRoman.ttf
+    - family: TimesNewRoman
+      fonts:
+        - asset: fonts/timesnewroman.ttf
+        - asset: fonts/timesnewromanbold.ttf
+          weight: 700
+        - asset: fonts/timesnewromanitalic.ttf
+          style: italic
+        - asset: fonts/timesnewromanbolditalic.ttf
+          style: italic
+          weight: 700
+
   assets:
     - photos/IMG_6663copy.jpeg
     - photos/thai-noodles-5-22-10-3247233573.jpg
+
 
   # To add assets to your application, add an assets section, like this:
   # assets:
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
-
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
 

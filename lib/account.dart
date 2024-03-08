@@ -12,7 +12,7 @@ class AccountsPage extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               CircleAvatar(
                 radius: 50, // Profile picture radius
                 // backgroundImage: NetworkImage('your_image_url_here'), // Uncomment and replace with actual image url

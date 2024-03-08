@@ -1,6 +1,6 @@
 // File contains 'Favorites' page
 
-import 'accounts.dart';
+import 'account.dart';
 import 'maps.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -201,6 +201,99 @@ class _FavoritesState extends State<Favorites> {
           child: ListOfFavorites(),
         ),
       ),
+      // bottomNavigationBar: Container(
+      //   // Creates shadow to outline BottomNavigationBar
+      //   decoration: const BoxDecoration(
+      //     boxShadow: <BoxShadow>[
+      //       BoxShadow(
+      //         blurRadius: 10,
+      //         color: Colors.grey,
+      //       ),
+      //     ],
+      //   ),
+      //   child: SizedBox(
+      //     height: 118,
+      //     child: BottomNavigationBar(
+      //       // Containes 5 icon buttons
+      //       backgroundColor: Colors.white,
+      //       showSelectedLabels: false,
+      //       showUnselectedLabels: false,
+      //       items: const <BottomNavigationBarItem>[
+      //         BottomNavigationBarItem(
+      //           // Home screen
+      //           icon: Icon(
+      //             size: 42.0,
+      //             Icons.home,
+      //             color: Colors.black,
+      //           ),
+      //           label: 'Home',
+      //         ),
+      //         BottomNavigationBarItem(
+      //           // Map screen
+      //           icon: Icon(
+      //             size: 42.0,
+      //             Icons.location_on_outlined,
+      //             color: Colors.black,
+      //           ),
+      //           label: 'Maps',
+      //         ),
+      //         BottomNavigationBarItem(
+      //           // Camera Screen
+      //           icon: Icon(
+      //             size: 42.0,
+      //             Icons.add_box_outlined,
+      //             color: Colors.black,
+      //           ),
+      //           label: 'Camera',
+      //         ),
+      //         BottomNavigationBarItem(
+      //           // Favorites screen (unusable bc already in screen)
+      //           icon: Icon(
+      //             size: 42.0,
+      //             CupertinoIcons.heart,
+      //             color: Colors.black,
+      //           ),
+      //           label: 'Favorites',
+      //         ),
+      //         BottomNavigationBarItem(
+      //           // Account screen (SecondRoute)
+      //           icon: Icon(
+      //             size: 42.0,
+      //             Icons.account_circle_outlined,
+      //             color: Colors.black,
+      //           ),
+      //           label: 'Account',
+      //         ),
+      //       ],
+      //       onTap: (index) {
+      //         switch (index) {
+      //           case 1:
+      //             Navigator.push(
+      //               // Go to Home screen
+      //               context,
+      //               MaterialPageRoute(builder: (context) => MapsPage()),
+      //             );
+      //             break;
+      //           case 3:
+      //             Navigator.push(
+      //               context,
+      //               MaterialPageRoute(builder: (context) => const Favorites()),
+      //             );
+      //             break;
+      //           case 4:
+      //             Navigator.push(
+      //               // Go to Account screen
+      //               context,
+      //               MaterialPageRoute(builder: (context) => AccountsPage()),
+      //             );
+      //             break;
+      //           default: // Favorites item is basically a no-op since we are already on the Favorites screen
+      //         }
+      //       },
+      //       type: BottomNavigationBarType.fixed,
+      //     ),
+      //   ),
+      // ),
     );
   }
 }
@@ -270,7 +363,7 @@ class _ListOfFavoritesState extends State<ListOfFavorites> {
             ],
           ),
           child: Builder(// Actual tile builder
-              builder: (context) {
+            builder: (context) {
             return ListTile(
               contentPadding: const EdgeInsets.fromLTRB(16.0, 0.0, 5.0, 0.0),
               minVerticalPadding: 0.0,
