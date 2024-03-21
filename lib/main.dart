@@ -24,10 +24,10 @@ class _MainPageState extends State<MainPage> {
 
   // Define your page widgets here
   final List<Widget> _pages = <Widget>[
-    Home(),
+    const Home(),
     MapsPage(), // Replace with your actual Account Page widget
-    Favorites(),
-    AccountsPage(),
+    const Favorites(),
+    const AccountsPage(),
     // Replace with your actual Favorites Page widget
   ];
 
@@ -43,69 +43,79 @@ class _MainPageState extends State<MainPage> {
       body: Center(
         child: _pages.elementAt(_selectedIndex),
       ),
-      bottomNavigationBar: Theme(
-        data: Theme.of(context).copyWith(
-        // sets the background color of the `BottomNavigationBar`
-          canvasColor: Colors.white,
-        ),
-        child: BottomNavigationBar(
-          showSelectedLabels: false,
-          showUnselectedLabels: false,
-          items: <BottomNavigationBarItem>[
-            BottomNavigationBarItem(
-              icon: Icon(
-                _selectedIndex == 0 
-                  ? Icons.home_sharp 
-                  : Icons.home_outlined,
-                size: 42,
-                color: Colors.black,
-              ),
-              label: 'Account',
+      bottomNavigationBar: Container(
+        decoration: const BoxDecoration(
+          boxShadow: <BoxShadow>[
+            BoxShadow(
+              blurRadius: 2,
+              color: Colors.grey,
             ),
-            BottomNavigationBarItem(
-              icon: Icon(
-                _selectedIndex == 1
-                    ? CupertinoIcons.location_fill
-                    : CupertinoIcons.location,
-                size: 42,
-                color: Colors.black,
-              ),
-              label: 'Maps',
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(
-                _selectedIndex == 2
-                    ? CupertinoIcons.plus_square_fill
-                    : CupertinoIcons.plus_square,
-                size: 42,
-                color: Colors.black,
-              ),
-              label: 'Favorites',
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(
-                _selectedIndex == 3
-                    ? CupertinoIcons.heart_fill
-                    : CupertinoIcons.heart,
-                size: 42,
-                color: Colors.black,
-              ),
-              label: 'Posts',
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(
-                _selectedIndex == 4
-                    ? CupertinoIcons.person_circle_fill
-                    : CupertinoIcons.person_circle,
-                size: 42,
-                color: Colors.black,
-              ),
-              label: 'Posts',
-            )
           ],
-          currentIndex: _selectedIndex,
-          selectedItemColor: Colors.amber[800],
-          onTap: _onItemTapped,
+        ),
+        child: Theme(
+          data: Theme.of(context).copyWith(
+          // sets the background color of the `BottomNavigationBar`
+            canvasColor: Colors.white,
+          ),
+          child: BottomNavigationBar(
+            showSelectedLabels: false,
+            showUnselectedLabels: false,
+            items: <BottomNavigationBarItem>[
+              BottomNavigationBarItem(
+                icon: Icon(
+                  _selectedIndex == 0 
+                    ? Icons.home_sharp 
+                    : Icons.home_outlined,
+                  size: 42,
+                  color: Colors.black,
+                ),
+                label: 'Account',
+              ),
+              BottomNavigationBarItem(
+                icon: Icon(
+                  _selectedIndex == 1
+                      ? CupertinoIcons.location_fill
+                      : CupertinoIcons.location,
+                  size: 42,
+                  color: Colors.black,
+                ),
+                label: 'Maps',
+              ),
+              BottomNavigationBarItem(
+                icon: Icon(
+                  _selectedIndex == 2
+                      ? CupertinoIcons.plus_square_fill
+                      : CupertinoIcons.plus_square,
+                  size: 42,
+                  color: Colors.black,
+                ),
+                label: 'Favorites',
+              ),
+              BottomNavigationBarItem(
+                icon: Icon(
+                  _selectedIndex == 3
+                      ? CupertinoIcons.heart_fill
+                      : CupertinoIcons.heart,
+                  size: 42,
+                  color: Colors.black,
+                ),
+                label: 'Posts',
+              ),
+              BottomNavigationBarItem(
+                icon: Icon(
+                  _selectedIndex == 4
+                      ? CupertinoIcons.person_circle_fill
+                      : CupertinoIcons.person_circle,
+                  size: 42,
+                  color: Colors.black,
+                ),
+                label: 'Posts',
+              )
+            ],
+            currentIndex: _selectedIndex,
+            selectedItemColor: Colors.amber[800],
+            onTap: _onItemTapped,
+          ),
         ),
       ),
     );
